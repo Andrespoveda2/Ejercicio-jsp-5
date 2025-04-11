@@ -23,11 +23,9 @@ public class validar extends HttpServlet {
         String password = request.getParameter("clave");
 
         HttpSession session = request.getSession();
-        Integer intentosFallidos = (Integer) session.getAttribute("intentosFallidos");
+      
 
-        if (intentosFallidos == null) {
-            intentosFallidos = 0;
-        }
+       
 
         boolean esValido = false;
 
@@ -35,17 +33,14 @@ public class validar extends HttpServlet {
             ("admin2".equals(user) && "1234".equals(password)) ||
             ("admin3".equals(user) && "2222".equals(password))) {
             esValido = true;
-        } else {
-            intentosFallidos++;
-            session.setAttribute("intentosFallidos", intentosFallidos);
-        }
+        } 
 
         if (esValido) {
             session.setAttribute("usuario", user);
             session.removeAttribute("intentosFallidos"); // limpiar intentos
             response.sendRedirect("principal.jsp");
         } else {
-            session.setAttribute("errorLogin", "Usuario o contraseña incorrectos. Intentos: " + intentosFallidos);
+            session.setAttribute("errorLogin", "Usuario o contraseña incorrectos.");
             response.sendRedirect("loginError.jsp");
         }
     }
