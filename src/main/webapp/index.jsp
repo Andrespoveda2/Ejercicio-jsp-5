@@ -1,28 +1,39 @@
 <%-- 
     Document   : index
-    Created on : 9/04/2025, 8:54:06 a. m.
+    Created on : 11/04/2025, 11:52:55 a. m.
     Author     : SENA
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
-<head>
-    <title>Ingreso de Usuario</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <head>
+    <title>Bienvenido</title>
 </head>
-<body>
-    <div>Ingreso Usuario</div>
-    <form name="Ingreso" action="ValidarUsuario" method="post">
-        <br><br>
-        Usuario: <input type="text" name="usuario" value="" />
-        <br><br>
-        Clave: <input type="password" name="clave" value="" />
-        <br><br>
-        <input type="submit" value="Ingresar" />
-        <br><br>
-    </form>
-</body>
-</html>
+    <body>
+    <h1>Bienvenido al sistema</h1>
+    
+        <%
+            String usuario = (String) session.getAttribute("usuario");
 
+            if (usuario != null) {
+        %>
+        <p>Has iniciado sesión como: <strong><%= usuario %></strong></p>
+            <form action="principal.jsp" method="get">
+                <input type="submit" value="Ir a Página Principal" />
+            </form>
+            <form action="logout.jsp" method="post">
+                <input type="submit" value="Cerrar Sesión" />
+            </form>
+        <%
+            } else {
+        %>
+        <form action="login.jsp" method="get">
+            <input type="submit" value="Ingresar" />
+        </form>
+            <p style="color:gray;">Inicia sesión para acceder a la página principal.</p>
+        <%
+            }
+        %>
+    </body>
+</html>
