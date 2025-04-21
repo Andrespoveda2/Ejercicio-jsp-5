@@ -9,6 +9,7 @@
 <html>
 <head>
     <title>Error de Login</title>
+    <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
     <h1>Error de autenticación</h1>

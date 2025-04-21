@@ -9,19 +9,29 @@
 <html>
 <head>
     <title>Ingreso de Usuario</title>
+    <link rel="stylesheet" href="estilos.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-    <div>Ingreso Usuario</div>
+     <video autoplay muted loop id="videoFondo">
+        <source src="video.mp4" type="video/mp4">
+        Tu navegador no soporta video en HTML5.
+    </video>
+
     <form name="Ingreso" action="ValidarUsuario" method="post">
-        <br><br>
-        Usuario: <input type="text" name="usuario" value="" />
-        <br><br>
-        Clave: <input type="password" name="clave" value="" />
+        <h3>Inicie sesion</h3>
+        <label for="usuario">usuario: </label>
+        <input type="text" name="usuario" value="" />
+    
+        <label for="clave">clave: </label>
+        <input type="password" name="clave" value="" />
         <br><br>
         <input type="submit" value="Ingresar" />
-        <br><br>
+        <div class="social">
+          <div class="go"><i class="fab fa-google"></i>  Google</div>
+          <div class="fb"><i class="fab fa-facebook"></i>  Facebook</div>
+        </div>
     </form>
 </body>
 </html>
