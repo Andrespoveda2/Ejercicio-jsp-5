@@ -9,10 +9,18 @@
 <html>
     <head>
     <title>Bienvenido</title>
+    <link rel="stylesheet" href="styles.css">
+    
 </head>
     <body>
-    <h1>Bienvenido al sistema</h1>
-    
+       <video autoplay muted loop id="videoFondo">
+        <source src="video.mp4" type="video/mp4">
+        Tu navegador no soporta video en HTML5.
+    </video>
+    <div>
+          <h1>Bienvenido al sistema</h1>
+          <img src="OIP.jpg" alt="cohete">
+         <p style="color:gray;">Inicia sesión para acceder a la página principal.</p>
         <%
             String usuario = (String) session.getAttribute("usuario");
 
@@ -31,9 +39,10 @@
         <form action="login.jsp" method="get">
             <input type="submit" value="Ingresar" />
         </form>
-            <p style="color:gray;">Inicia sesión para acceder a la página principal.</p>
+        
         <%
             }
         %>
+    </div>
     </body>
 </html>

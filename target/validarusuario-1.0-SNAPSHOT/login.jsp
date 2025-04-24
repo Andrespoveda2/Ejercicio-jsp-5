@@ -21,11 +21,11 @@
 
     <form name="Ingreso" action="ValidarUsuario" method="post">
         <h3>Inicie sesion</h3>
-        <label for="usuario">usuario: </label>
-        <input type="text" name="usuario" value="" />
+        <label for="usuario">Usuario: </label>
+        <input type="text" name="usuario" value=""placeholder="inserte su Usuario:" />
     
-        <label for="clave">clave: </label>
-        <input type="password" name="clave" value="" />
+        <label for="clave">Clave: </label>
+        <input type="password" name="clave" value="" placeholder="inserte su clave:"/>
         <br><br>
         <input type="submit" value="Ingresar" />
         <div class="social">

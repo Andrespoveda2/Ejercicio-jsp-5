@@ -1,0 +1,110 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 21/04/2025, 11:55:36 a. m.
+    Author     : SENA
+*/
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#videoFondo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    filter: brightness(0.6); /* opcional: oscurece para que el texto resalte */
+}
+img {
+  border: 5px solid #ccc;
+  box-shadow: 10px 10px 5px #888888;
+  width: 300px;
+  height: auto;
+}
+
+div{
+     height: auto; /* en lugar de 150px para que se adapte al contenido */
+    width: 400px;
+    background-color: rgba(255,255,255,0.13);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255,255,255,0.1);
+    box-shadow: 0 0 40px rgba(8,7,16,0.6);
+    padding: 50px 35px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;    /* ✅ centra horizontalmente */
+    justify-content: center; /* ✅ centra verticalmente el contenido */
+    text-align: center;
+}
+div *{
+    font-family: 'Poppins',sans-serif;
+    color: #ffffff;
+    letter-spacing: 0.5px;
+    outline: none;
+    border: none;
+}
+div h1{
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 42px;
+    text-align: center;
+}
+
+/* Contenedor del contenido */
+.container {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+    text-align: center;
+    width: 90%;
+    max-width: 400px;
+    backdrop-filter: blur(10px);
+}
+
+/* Título principal */
+h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+/* Párrafos */
+p {
+    margin: 15px 0;
+    font-size: 16px;
+}
+
+/* Botones */
+input[type="submit"] {
+    padding: 10px 20px;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    margin: 10px;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+strong {
+    color: #ffd700;
+}
+
+

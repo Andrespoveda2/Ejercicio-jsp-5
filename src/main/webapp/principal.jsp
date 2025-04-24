@@ -15,6 +15,7 @@
 %>
 <html>
 <head>
+        <link rel="stylesheet" href="indexcss.css">
     <title>Página Principal</title>
     <style>
         body { font-family: Arial; background-color: #f2f2f2; padding: 20px; }
@@ -22,11 +23,20 @@
     </style>
 </head>
 <body>
-    <div class="container">
+              <video autoplay muted loop id="videoFondo">
+        <source src="video.mp4" type="video/mp4">
+        Tu navegador no soporta video en HTML5.
+    </video>
+    <div class="infocardContainer">
+          <div id="main">
+ <img src="perfil.jpg" alt="elon">
+  </div>
+         <div id="textbois">
         <h1>Bienvenido, <%= usuario %>!</h1>
         <p>Esta es tu página principal, ¡disfrútala!</p>
         <a href="index.jsp">Volver al inicio</a> |
         <a href="logout.jsp">Cerrar sesión</a>
+    </div>
     </div>
 </body>
 </html>
